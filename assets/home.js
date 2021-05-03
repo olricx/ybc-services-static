@@ -155,28 +155,74 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/assets/js/index.js":
-/*!********************************!*\
-  !*** ./src/assets/js/index.js ***!
-  \********************************/
+/***/ "./src/assets/js/components/navbar.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/components/navbar.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var scrollpos = window.scrollY;
+var navbar = document.querySelector(".navbar");
+var navbar_height = navbar.offsetHeight;
+var whiteLogo = document.querySelector(".logo-white");
+var logo = document.querySelector(".logo-original");
+
+var add_class_on_scroll = function add_class_on_scroll() {
+  return navbar.classList.add("navbar-stick");
+};
+
+var remove_class_on_scroll = function remove_class_on_scroll() {
+  return navbar.classList.remove("navbar-stick");
+};
+
+var add_white_logo = function add_white_logo() {
+  return whiteLogo.classList.remove("d-none");
+};
+
+var remove_white_logo = function remove_white_logo() {
+  return whiteLogo.classList.add("d-none");
+};
+
+var add_logo = function add_logo() {
+  return logo.classList.remove("d-none");
+};
+
+var remove_logo = function remove_logo() {
+  return logo.classList.add("d-none");
+};
+
+window.addEventListener('scroll', function () {
+  scrollpos = window.scrollY;
+
+  if (scrollpos >= navbar_height) {
+    add_class_on_scroll();
+    remove_white_logo();
+    add_logo();
+  } else {
+    remove_class_on_scroll();
+    add_white_logo();
+    remove_logo();
+  }
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/components/slider.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/components/slider.js ***!
+  \********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../scss/main.scss */ "./src/assets/scss/main.scss");
-/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
- // import { Tooltip, Popover, Dropdown } from "bootstrap";
-
-
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
  // configure Swiper to use modules
 
-swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["EffectFade"], swiper__WEBPACK_IMPORTED_MODULE_3__["Autoplay"]]);
-var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-hero', {
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectFade"], swiper__WEBPACK_IMPORTED_MODULE_0__["Autoplay"]]);
+var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-hero', {
   effect: 'fade',
   loop: true,
   autoplay: {
@@ -192,28 +238,62 @@ var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-her
     prevEl: '.swiper-button-prev'
   }
 });
-var commercialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-commercial', {
+var commercialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-commercial', {
   slidesPerView: 4,
-  spaceBetween: 24,
+  spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
 });
-var testimonialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-testimonials', {
+var testimonialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-testimonials', {
+  grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true
   }
 });
-var facilitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-facilities', {
+var facilitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-facilities', {
   slidesPerView: 6,
-  spaceBetween: 24,
+  spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
 });
+var innerHeroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper--inner-hero', {
+  effect: 'fade',
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  }
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/index.js":
+/*!********************************!*\
+  !*** ./src/assets/js/index.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../scss/main.scss */ "./src/assets/scss/main.scss");
+/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/assets/js/components/slider.js");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/navbar */ "./src/assets/js/components/navbar.js");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_navbar__WEBPACK_IMPORTED_MODULE_4__);
+
+ // import { Tooltip, Popover, Dropdown } from "bootstrap";
+
+
+
+
 var d = new Date();
 var n = d.getFullYear();
 document.querySelector(".current-year").innerHTML = n;
