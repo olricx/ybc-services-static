@@ -239,26 +239,49 @@ var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-her
   }
 });
 var commercialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-commercial', {
-  slidesPerView: 4,
+  slidesPerView: 2,
   spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3
+    },
+    1200: {
+      slidesPerView: 4
+    }
   }
 });
 var testimonialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-testimonials', {
   grabCursor: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true
   }
 });
 var facilitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-facilities', {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3
+    },
+    1024: {
+      slidesPerView: 4
+    },
+    1200: {
+      slidesPerView: 6
+    }
   }
 });
 var innerHeroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper--inner-hero', {

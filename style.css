@@ -2450,7 +2450,7 @@ textarea.form-control-lg {
   background-color: #ffffff;
   background-clip: padding-box;
   border: 0 solid transparent;
-  border-radius: 0.25rem; }
+  border-radius: 0; }
   .dropdown-menu[data-bs-popper] {
     left: 0;
     margin-top: 0.125rem; }
@@ -6927,7 +6927,13 @@ label {
   --swiper-theme-color: #008746; }
 
 .swiper-hero {
-  height: 70vh; }
+  height: 65vh; }
+  @media (max-width: 1199.98px) {
+    .swiper-hero {
+      height: 80vh; } }
+  @media (max-width: 575.98px) {
+    .swiper-hero {
+      height: 100vh; } }
   .swiper-hero .swiper-slide {
     display: flex;
     align-items: flex-end; }
@@ -6949,6 +6955,12 @@ label {
       padding: 3rem 3rem 4.5rem;
       background-color: rgba(0, 0, 0, 0.48);
       backdrop-filter: blur(24px); }
+      @media (max-width: 1199.98px) {
+        .swiper-hero .swiper-caption-box {
+          width: 60vw; } }
+      @media (max-width: 767.98px) {
+        .swiper-hero .swiper-caption-box {
+          width: 100%; } }
     .swiper-hero .swiper-caption-desc, .swiper-hero .swiper-caption-title {
       margin-bottom: 2rem; }
     .swiper-hero .swiper-caption-title {
@@ -6986,6 +6998,12 @@ label {
     width: 34vw;
     padding: 0 3rem 3rem 3rem;
     color: #ffffff; }
+    @media (max-width: 1199.98px) {
+      .swiper-hero .pagination-wrapper {
+        width: 60vw; } }
+    @media (max-width: 767.98px) {
+      .swiper-hero .pagination-wrapper {
+        width: 100%; } }
     .swiper-hero .pagination-wrapper > div > div:not(:last-child) {
       margin-right: 1rem; }
 
