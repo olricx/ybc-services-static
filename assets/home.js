@@ -240,6 +240,7 @@ var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-her
 });
 var commercialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-commercial', {
   slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -247,10 +248,12 @@ var commercialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swip
   },
   breakpoints: {
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      slidesPerGroup: 3
     },
     1200: {
-      slidesPerView: 4
+      slidesPerView: 4,
+      slidesPerGroup: 4
     }
   }
 });
@@ -267,6 +270,7 @@ var testimonialSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swi
 });
 var facilitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-facilities', {
   slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -274,13 +278,16 @@ var facilitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swip
   },
   breakpoints: {
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      slidesPerGroup: 3
     },
     1024: {
-      slidesPerView: 4
+      slidesPerView: 4,
+      slidesPerGroup: 4
     },
     1200: {
-      slidesPerView: 6
+      slidesPerView: 6,
+      slidesPerGroup: 6
     }
   }
 });
