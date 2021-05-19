@@ -6650,6 +6650,39 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.text-gray-0 {
+  color: #F5F5F5; }
+
+.text-gray-5 {
+  color: #EAEBEB; }
+
+.text-gray-10 {
+  color: #D4D5D7; }
+
+.text-gray-20 {
+  color: #A9ACAF; }
+
+.text-gray-30 {
+  color: #7F8286; }
+
+.text-gray-40 {
+  color: #54595E; }
+
+.text-gray-50 {
+  color: #292F36; }
+
+.text-gray-60 {
+  color: #1F2329; }
+
+.text-gray-70 {
+  color: #15181B; }
+
+.text-gray-80 {
+  color: #0A0C0E; }
+
+.text-gray-90 {
+  color: #040505; }
+
 .badge-blur {
   background-color: rgba(0, 0, 0, 0.48);
   backdrop-filter: blur(24px);
@@ -7727,6 +7760,20 @@ label {
     .section-inner-training .content {
       padding-left: 0;
       padding-right: 0; } }
+
+.section--innovation .media-wrapper {
+  position: relative;
+  padding-top: calc(448 / 696 * 100%); }
+  .section--innovation .media-wrapper img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.section--innovation > .row {
+  padding: 4.5rem 0; }
 
 footer .newsletter {
   background-color: #1F2329;
